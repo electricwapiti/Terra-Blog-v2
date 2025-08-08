@@ -21,8 +21,12 @@ const postSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         required: Date.now,
+    },
+    vector: {
+        type: [Number],
+        required: false,
     }
-})
+});
 
 const Post = mongoose.model('Post', postSchema);
 export default Post;
