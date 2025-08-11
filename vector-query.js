@@ -10,7 +10,7 @@ async function run() {
         const database = client.db("terra-blog"); 
         const collection = database.collection("posts"); 
         // Generate embedding for the search query
-        const queryEmbedding = await getEmbedding("How are new technologies changing how people make art?");
+        const queryEmbedding = await getEmbedding("How is AI changing how people make art?");
         // Define the sample vector search pipeline
         const pipeline = [
             {
@@ -25,7 +25,8 @@ async function run() {
             {
                 $project: {
                     _id: 0,
-                    summary: 1,
+                    title: 1,
+                    content: 1,
                     score: {
                         $meta: "vectorSearchScore"
                     }
