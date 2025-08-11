@@ -15,7 +15,7 @@ async function run() {
           "fields": [
             {
               "type": "vector",
-              "path": "embedding",
+              "path": "vector",
               "similarity": "cosine",
               "numDimensions": 768
             }

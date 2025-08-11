@@ -17,7 +17,7 @@ async function run() {
                 $vectorSearch: {
                     index: "vector_index",
                     queryVector: queryEmbedding,
-                    path: "embedding",
+                    path: "vector",
                     exact: true,
                     limit: 5
                 }
