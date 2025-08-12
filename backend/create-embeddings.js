@@ -9,7 +9,7 @@ import { MongoClient } from 'mongodb';
 import { getEmbedding } from './get-embeddings.js';
 import { convertEmbeddingsToBSON } from './convert-embeddings.js';
 import dotenv from 'dotenv';
-dotenv.config();
+dotenv.config({ path: './backend/.env' });
 
 async function run() {
     // Connect to your Atlas cluster
