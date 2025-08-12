@@ -1,5 +1,8 @@
 import { MongoClient } from 'mongodb';
 import { getEmbedding } from './get-embeddings.js';
+import dotenv from 'dotenv';
+dotenv.config();
+
 // MongoDB connection URI and options
 const client = new MongoClient(process.env.ATLAS_CONNECTION_STRING);
 async function run() {
